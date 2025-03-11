@@ -1,6 +1,14 @@
 FROM ubuntu:22.04
 
-RUN apt update && apt install -y cmake g++ libboost-all-dev git libasio-dev
+RUN apt update && apt install -y \
+    cmake g++ \
+    libasio-dev \
+    libboost-all-dev \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    libjsoncpp-dev \
+    pkg-config \
+    git
 
 WORKDIR /app
 COPY . .
